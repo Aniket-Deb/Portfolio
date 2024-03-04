@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1f242d;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10%;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 27px;
+    cursor: default;
+    animation: slideleft 1s ease forwards;
+}
+.navbar a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 16px;
+    font-weight: 600;
+    transition: 0.3s all;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+.navbar a:hover {
+    color: #0ef;
+}
+
+/**------Hero Section------**/
+
+.hero-container {
+    display: flex;
+    padding: 25px 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-side h3{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0px;
+    letter-spacing: 1px;
+}
+.info-side h1{
+    font-size: 75px;
+    letter-spacing: 10px;
+    font-weight: 700;
+    animation: slideRight 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+.info-side h3 span{
+    color: #0ef;
+}
+.part-1{
+    animation: part1 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.part-2{
+    animation: part2 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+p{
+    line-height: 27px;
+    margin: 20px 0px 40px 0px;
+    animation: slideleft 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+.hero-img img{
+    width: 450px;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+i{
+    position: relative;
+    border: 2px solid #0ef;
+    padding: 10px;
+    border-radius: 50%;
+    color: #0ef;
+    margin: 0px 8px;
+    transition: 0.3s;
+    animation: socialIcons 1s ease forwards;
+    animation-delay: calc(0.3s * var(--i));
+    opacity: 0;
+}
+i:hover{
+    box-shadow: 0 0 20px #0ef;
+}
+button {
+    background-color: #0ef;
+    margin-top: 50px;
+    padding: 20px 70px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+    box-shadow: 0 0 15px #0ef;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+button:hover{
+    box-shadow: none;
+}
+
+/**------Animation------**/
+
+@keyframes slideleft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes navMenu {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes part1 {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes part2 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideleft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes socialIcons {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/**************************About My Self**************************/
+
+.about {
+    display: flex;
+    padding: 15px 10%;
+    justify-content: center;
+    align-items: center;
+    animation: slideleft 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0s;
+}
+.box {
+    margin: 1px;
+    font-size: 16px;
+    padding: 20px 12%;
+    display: inline-flex;
+    justify-content: center;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.box1 {
+    padding-left: 110px;
+    letter-spacing: 3px;
+    border: 1px solid #0ef;
+    padding: 10px;
+    border-radius: 0%;
+}
+.box2 {
+    margin-left: 250px;
+    padding: 50px;
+    letter-spacing: 3px;
+    border: 1px solid #0ef;
+    padding: 10px;
+    border-radius: 0%;
+}
+.education {
+    padding: 22px 10%;
+    animation: part1 0s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.secondary {
+    animation: slideleft 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+.diploma {
+    animation: slideleft 1s ease forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+.bachelor {
+    animation: slideleft 1s ease forwards;
+    opacity: 0;
+    animation-delay: 3s;
+}
+
+/**************************About My Skills**************************/
+
+.skills {
+    color: #0ef;
+    display: flex;
+    padding: 15px 10%;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.frontD {
+    display: flex;
+    padding: 15px 10%;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.imgbox1 {
+    margin-top: 40px;
+    text-align: center;
+    letter-spacing: 80px;
+    animation: slideleft 1.5s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+.backD {
+    margin-top: 50px;
+    display: flex;
+    padding: 15px 10%;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.imgbox2 {
+    margin-top: 40px;
+    text-align: center;
+    letter-spacing: 80px;
+    animation: slideRight 1.5s ease forwards;
+    opacity: 0;
+    animation-delay: 1.5s;
+}
+
+/********About My Projects********/
+
+.projects {
+    color: #0ef;
+    display: flex;
+    padding: 10px 10%;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+/*******Contact Me*******/
+
+.contacth1 {
+    color: #0ef;
+    display: flex;
+    padding: 10px 10%;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.contact {
+    padding-bottom: 80px;
+    height: 510px;
+    display: grid;
+    place-content: center;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.form-group {
+    width: 400px;
+    margin: 20px 0;
+}
+.form-group input {
+    width: 100%;
+    height: 42px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+.form-group textarea {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    resize: none;
+    padding: 20px;
+    font-size: 14px;
+}
+#btn {
+    background-color: #0ef;
+    margin-top: 12px;
+    padding: 20px 70px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+    box-shadow: 0 0 15px #0ef;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+#btn:hover{
+    box-shadow: none;
+    background-color: black;
+    color: #0ef;
+}
+footer h3 {
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+    font-size: x-large;
+    margin: 0 0 25px 0;
+    color: white;
+}
