@@ -5,7 +5,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 body {
     background-color: #1f242d;
     font-family: 'Poppins', sans-serif;
@@ -16,7 +15,6 @@ body {
     justify-content: space-between;
     padding: 25px 10%;
 }
-
 .logo {
     color: #fff;
     text-decoration: none;
@@ -24,6 +22,12 @@ body {
     font-size: 27px;
     cursor: default;
     animation: slideleft 1s ease forwards;
+}
+.logofixed {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 27px;
 }
 .navbar a{
     display: inline-block;
@@ -37,6 +41,16 @@ body {
     opacity: 0;
 }
 .navbar a:hover {
+    color: #0ef;
+}
+.navbarfixed a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 16px;
+    font-weight: 600;
+}
+.navbarfixed a:hover {
     color: #0ef;
 }
 
@@ -104,7 +118,8 @@ i{
 i:hover{
     box-shadow: 0 0 20px #0ef;
 }
-button {
+.info-side .btn {
+    text-decoration: none;
     background-color: #0ef;
     margin-top: 50px;
     padding: 20px 70px;
@@ -118,7 +133,7 @@ button {
     animation-delay: 1.5s;
     opacity: 0;
 }
-button:hover{
+.info-side .btn:hover {
     box-shadow: none;
 }
 
@@ -282,14 +297,14 @@ button:hover{
     justify-content: center;
     align-items: center;
     animation: zoomIn 1s ease forwards;
-    animation-delay: 1s;
+    animation-delay: 0s;
     opacity: 0;
 }
 .frontD {
     display: flex;
     padding: 15px 10%;
     animation: zoomIn 1s ease forwards;
-    animation-delay: 1s;
+    animation-delay: 0s;
     opacity: 0;
 }
 .imgbox1 {
@@ -298,14 +313,14 @@ button:hover{
     letter-spacing: 80px;
     animation: slideleft 1.5s ease forwards;
     opacity: 0;
-    animation-delay: 1s;
+    animation-delay: 0s;
 }
 .backD {
     margin-top: 50px;
     display: flex;
     padding: 15px 10%;
     animation: zoomIn 1s ease forwards;
-    animation-delay: 1s;
+    animation-delay: 0s;
     opacity: 0;
 }
 .imgbox2 {
@@ -314,7 +329,7 @@ button:hover{
     letter-spacing: 80px;
     animation: slideRight 1.5s ease forwards;
     opacity: 0;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
 }
 
 /********About My Projects********/
@@ -326,11 +341,12 @@ button:hover{
     justify-content: center;
     align-items: center;
     animation: zoomIn 1s ease forwards;
-    animation-delay: 1s;
+    animation-delay: 0s;
     opacity: 0;
 }
 
 /*******Contact Me*******/
+
 
 .contacth1 {
     color: #0ef;
@@ -339,7 +355,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     animation: zoomIn 1s ease forwards;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
     opacity: 0;
 }
 .contact {
@@ -350,12 +366,12 @@ button:hover{
     justify-content: center;
     align-items: center;
     animation: zoomIn 1s ease forwards;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
     opacity: 0;
 }
 .form-group {
     width: 400px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .form-group input {
     width: 100%;
@@ -374,6 +390,13 @@ button:hover{
     resize: none;
     padding: 20px;
     font-size: 14px;
+}
+.form-group span{
+    font-size: small;
+    color: #ff3333;
+}
+#send-error{
+    color: #ff3333;
 }
 #btn {
     background-color: #0ef;
@@ -401,4 +424,64 @@ footer h3 {
     font-size: x-large;
     margin: 0 0 25px 0;
     color: white;
+}
+
+/*Media Screen*/
+
+@media screen and (max-width: 500px) {
+    .hero-container {
+        flex-direction: column-reverse;
+    };
+    .hero-img img{
+        width: 300px;
+    }
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 10px;
+    }
+    .navbar {
+        padding-top: 10px;
+    }
+    .info-side h3 {
+        font-size: 20px;
+    }
+    .info-side h1 {
+        font-size: 45px;
+    }
+    .box {
+        flex-direction: column;
+        padding: 20px 8%;
+    }
+    .box2 {
+        margin-top: 15px;
+    }
+    .frontD h2{
+        padding-left: 81px;
+    }
+    .imgbox1 {
+        display: ruby-text
+    }
+    .backD h2{
+        margin-top: 25px;
+        padding-left: 81px;
+    }
+    .imgbox2 {
+        display: ruby-text;
+    }
+    .contacth1 {
+        padding: 25px;
+    }
+    .footer h3 {
+        padding-top: 100px;
+    }
+    .form-group input {
+        width: 70%;
+        text-align: center;
+        margin-left: 62px;
+    }
+    .btn{
+     margin-left: 116px;   
+    }
 }
