@@ -451,17 +451,22 @@ footer h3 {
         font-size: 45px;
     }
     .box {
+        margin-left: 50px;
         flex-direction: column;
-        padding: 20px 8%;
+        padding: inherit;
+    }
+    .box1{
+        display: contents;
     }
     .box2 {
-        margin-top: 15px;
+        display: contents;
     }
     .frontD h2{
         padding-left: 81px;
     }
     .imgbox1 {
-        display: ruby-text
+        margin-top: auto;
+        -webkit-user-modify: read-write-plaintext-only;
     }
     .backD h2{
         margin-top: 25px;
@@ -481,7 +486,9 @@ footer h3 {
         text-align: center;
         margin-left: 62px;
     }
-    .btn{
-     margin-left: 116px;   
+    .form-group textarea {
+        width: 70%;
+        text-align: center;
+        margin-left: 62px;
     }
 }
