@@ -435,6 +435,14 @@ footer h3 {
     .hero-img img{
         width: 300px;
     }
+    .navbar {
+        padding-top: 20px;
+        font-size: 10px;
+    }
+    .navbarfixed{
+        padding-top: 20px;
+        font-size: 10px;
+    }
     .header {
         flex-direction: column;
         justify-content: center;
@@ -451,7 +459,7 @@ footer h3 {
         font-size: 45px;
     }
     .box {
-        margin-left: 50px;
+        margin-left: -15px;
         flex-direction: column;
         padding: inherit;
     }
@@ -462,18 +470,19 @@ footer h3 {
         display: contents;
     }
     .frontD h2{
-        padding-left: 81px;
+        padding-left: 35px;
     }
     .imgbox1 {
+        justify-content: center;
         margin-top: auto;
-        -webkit-user-modify: read-write-plaintext-only;
+        display: inline-table;
     }
     .backD h2{
         margin-top: 25px;
-        padding-left: 81px;
+        padding-left: 35px;
     }
     .imgbox2 {
-        display: ruby-text;
+        display: inline-table;
     }
     .contacth1 {
         padding: 25px;
@@ -490,5 +499,10 @@ footer h3 {
         width: 70%;
         text-align: center;
         margin-left: 62px;
+    }
+    #btn{
+        width: 50%;
+        text-align: center;
+        margin-left: 100px;
     }
 }
