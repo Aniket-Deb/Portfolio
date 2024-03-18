@@ -446,6 +446,9 @@ footer h3 {
         padding-top: 20px;
         font-size: 15px;
     }
+    .navbarfixed a {
+        padding: 0px 5px;
+    }
     .header {
         flex-direction: column;
         justify-content: center;
@@ -462,7 +465,10 @@ footer h3 {
         font-size: 45px;
     }
     .box {
-        margin-left: -15px;
+        list-style: none;
+        border: 1px solid #0ef;
+        margin-left: 10px;
+        font-size: 15px;
         flex-direction: column;
         padding: inherit;
     }
