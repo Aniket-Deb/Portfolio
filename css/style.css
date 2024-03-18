@@ -433,15 +433,18 @@ footer h3 {
         flex-direction: column-reverse;
     };
     .hero-img img{
-        width: 300px;
+        width: 250px;
     }
     .navbar {
         padding-top: 20px;
-        font-size: 10px;
+        font-size: 15px;
+    }
+    .navbar a {
+        padding: 0px 5px;
     }
     .navbarfixed{
         padding-top: 20px;
-        font-size: 10px;
+        font-size: 15px;
     }
     .header {
         flex-direction: column;
