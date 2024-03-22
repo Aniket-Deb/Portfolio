@@ -23,60 +23,111 @@
         <h1>Contact Me</h1>
     </div>
     <div class="contact">
-    <form onsubmit="sendEmail(); reset(); return false;">
-        <div class="form-group">
-        <input type="text" placeholder="Enter Name" id="name" required>
-        </div>
-        <div class="form-group">
-        <input type="email" placeholder="Enter Email" id="email" required>
-        </div>
-        <div class="form-group">
-        <input type="tel" placeholder="Enter Contact No." id="contact" required>
-        </div>
-        <div class="form-group">
-        <input type="subject" placeholder="Enter Email Subject" id="subject" required>
-        </div>
-        <div class="form-group">
-        <textarea id="message" cols="" rows="5" placeholder="Ask me anything...." required></textarea>
-        </div>
-        <input id="btn" type="submit" onclick="sendEmail()" value="Send">
-    </form>
-    </div>
-    <footer>
-    <div style="text-align: center;">
-    <h3>Aniket Deb</h3>
-    <a href="https://www.facebook.com/AniketdeB" target="_blank"><i class="fa-brands fa-facebook" style="--i:7"></i></a>
-    <a href="https://www.instagram.com/_aniket.deb_/" target="_blank"><i class="fa-brands fa-instagram" style="--i:8"></i></a>
-    <a href="https://www.linkedin.com/in/aniket-deb-a0b177229/" target="_blank"><i class="fa-brands fa-linkedin" style="--i:9"></i></a>
-    <a href="mailto:aniketdeb2021@gmail.com" target="_blank"><i class="fa-solid fa-envelope" style="--i:10"></i></a>
-    <a href="https://maps.app.goo.gl/p4tXced9PnXVT68UA"><i class="fa-solid fa-location-dot" style="--i:11"></i></a>
-    <a href="tel:+917679262497"><i class="fa-solid fa-phone" style="--i:12"></i></a></div></footer>
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
-        function sendEmail(){
-            var body = "Name: " + document.getElementById("name").value
-            + "<br> Email: " + document.getElementById("email").value
-            + "<br> Phone no: " + document.getElementById("contact").value
-            + "<br> Message: " + document.getElementById("message").value
-
+        <form id="myForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <input type="text" placeholder="Enter Name" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Enter Email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Enter Contact No." id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Enter Email Subject" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" cols="" rows="5" placeholder="Ask me anything...." name="message" required></textarea>
+            </div>
+            <input id="btn" type="submit" value="Send">
+        </form></div>
+        
+        <footer>
+            <div style="text-align: center;">
+                <h3>Aniket Deb</h3>
+                <a href="https://www.facebook.com/AniketdeB" target="_blank"><i class="fab fa-facebook" style="--i:7"></i></a>
+                <a href="https://www.instagram.com/_aniket.deb_/" target="_blank"><i class="fab fa-instagram" style="--i:8"></i></a>
+                <a href="https://www.linkedin.com/in/aniket-deb-a0b177229/" target="_blank"><i class="fab fa-linkedin" style="--i:9"></i></a>
+                <a href="mailto:aniketdeb2021@gmail.com" target="_blank"><i class="fas fa-envelope" style="--i:10"></i></a>
+                <a href="https://maps.app.goo.gl/p4tXced9PnXVT68UA" target="_blank"><i class="fas fa-location-dot" style="--i:11"></i></a>
+                <a href="tel:+917679262497" target="_blank"><i class="fas fa-phone" style="--i:12"></i></a>
+            </div>
+        </footer>
+        
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var contact = document.getElementById("contact").value;
+            var subject = document.getElementById("subject").value;
+            var message = document.getElementById("message").value;
+            var errorElement = document.getElementById("errors");
+            var isValid = true;
+        
+            // Reset previous errors
+            errorElement.innerHTML = "";
+        
+            // Name validation
+            if (name === "") {
+                errorElement.innerHTML += "<p class='error'>Name is required.</p>";
+                isValid = false;
+            }
+        
+            // Email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                errorElement.innerHTML += "<p class='error'>Invalid email format.</p>";
+                isValid = false;
+            }
+        
+            // Contact validation (you can add more specific validation if needed)
+            if (contact === "") {
+                errorElement.innerHTML += "<p class='error'>Contact number is required.</p>";
+                isValid = false;
+            }
+        
+            // Subject validation
+            if (subject === "") {
+                errorElement.innerHTML += "<p class='error'>Subject is required.</p>";
+                isValid = false;
+            }
+        
+            // Message validation
+            if (message === "") {
+                errorElement.innerHTML += "<p class='error'>Message is required.</p>";
+                isValid = false;
+            }
+        
+            if (isValid) {
+                sendEmail();
+            }
+        
+            return false; // Prevents the form from submitting
+        }
+        function sendEmail() {
+            var body = "Name: " + document.getElementById("name").value +
+                       "<br>Email: " + document.getElementById("email").value +
+                       "<br>Contact No.: " + document.getElementById("contact").value +
+                       "<br>Subject: " + document.getElementById("subject").value +
+                       "<br>Message: " + document.getElementById("message").value;
+        
             Email.send({
-                SecureToken : "5b6c2feb-bc50-440f-b828-af42c9210b08",
-                To : 'aniket.deb@outlook.com',
-                From : "aniketdeb2021@gmail.com",
-                Subject : document.getElementById("subject").value,
-                Body : body,
-            }).then(
-            message =>{
-                if(message=='OK'){
+                SecureToken: "5b6c2feb-bc50-440f-b828-af42c9210b08",
+                To: 'aniket.deb@outlook.com',
+                From: "aniketdeb2021@gmail.com",
+                Subject: document.getElementById("subject").value,
+                Body: body,
+            }).then(function (message) {
+                if (message == 'OK') {
                     swal("Successfull", "Your Data Successfully Received", "success");
-                }
-                else{
+                } else {
                     swal("Something Wrong", "Your Data is not Received", "error");
                 }
-            }
-            );
+            });
         }
-    </script>
-</body>
+        </script>
+        <div id="errors"></div>
+        </body>
+        </html>
