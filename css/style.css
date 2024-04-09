@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #1f242d;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10%;
+}
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 27px;
+    cursor: default;
+    animation: slideleft 1s ease forwards;
+}
+.logofixed {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 27px;
+}
+.navbar a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 16px;
+    font-weight: 600;
+    transition: 0.3s all;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+.navbar a:hover {
+    color: #0ef;
+}
+.navbarfixed a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 16px;
+    font-weight: 600;
+}
+.navbarfixed a:hover {
+    color: #0ef;
+}
+
+/**------Hero Section------**/
+
+.hero-container {
+    display: flex;
+    padding: 25px 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-side h3{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0px;
+    letter-spacing: 1px;
+}
+.info-side h1{
+    font-size: 75px;
+    letter-spacing: 10px;
+    font-weight: 700;
+    animation: slideRight 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+.info-side h3 span{
+    color: #0ef;
+}
+.part-1{
+    animation: part1 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.part-2{
+    animation: part2 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+p{
+    line-height: 27px;
+    margin: 20px 0px 40px 0px;
+    animation: slideleft 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+.hero-img img{
+    width: 450px;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+i{
+    position: relative;
+    border: 2px solid #0ef;
+    padding: 10px;
+    border-radius: 50%;
+    color: #0ef;
+    margin: 0px 8px;
+    transition: 0.3s;
+    animation: socialIcons 1s ease forwards;
+    animation-delay: calc(0.3s * var(--i));
+    opacity: 0;
+}
+i:hover{
+    box-shadow: 0 0 20px #0ef;
+}
+.info-side .btn {
+    text-decoration: none;
+    background-color: #0ef;
+    margin-top: 50px;
+    padding: 20px 70px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+    box-shadow: 0 0 15px #0ef;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+.info-side .btn:hover {
+    box-shadow: none;
+}
+
+/**------Animation------**/
+
+@keyframes slideleft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes navMenu {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes part1 {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes part2 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideleft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes socialIcons {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/**************************About My Self**************************/
+
+.about {
+    display: flex;
+    padding: 15px 10%;
+    justify-content: center;
+    align-items: center;
+    animation: slideleft 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0s;
+}
+.box {
+    margin: 1px;
+    font-size: 16px;
+    padding: 20px 12%;
+    display: inline-flex;
+    justify-content: center;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.box1 {
+    padding-left: 110px;
+    letter-spacing: 3px;
+    border: 1px solid #0ef;
+    padding: 10px;
+    border-radius: 0%;
+}
+.box2 {
+    margin-left: 250px;
+    padding: 50px;
+    letter-spacing: 3px;
+    border: 1px solid #0ef;
+    padding: 10px;
+    border-radius: 0%;
+}
+.education {
+    padding: 22px 10%;
+    animation: part1 0s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.secondary {
+    animation: slideleft 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+.diploma {
+    animation: slideleft 1s ease forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+.bachelor {
+    animation: slideleft 1s ease forwards;
+    opacity: 0;
+    animation-delay: 3s;
+}
+
+/**************************About My Skills**************************/
+
+.skills {
+    color: #0ef;
+    display: flex;
+    padding: 15px 10%;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 0s;
+    opacity: 0;
+}
+.frontD {
+    display: flex;
+    padding: 15px 10%;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 0s;
+    opacity: 0;
+}
+.imgbox1 {
+    margin-top: 40px;
+    text-align: center;
+    letter-spacing: 80px;
+    animation: slideleft 1.5s ease forwards;
+    opacity: 0;
+    animation-delay: 0s;
+}
+.backD {
+    margin-top: 50px;
+    display: flex;
+    padding: 15px 10%;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 0s;
+    opacity: 0;
+}
+.imgbox2 {
+    margin-top: 40px;
+    text-align: center;
+    letter-spacing: 80px;
+    animation: slideRight 1.5s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+/********About My Projects********/
+
+.projects {
+    color: #0ef;
+    display: flex;
+    padding: 10px 10%;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 0s;
+    opacity: 0;
+}
+.portfolio{
+    padding: 25px 10%;
+    margin: 20px 0px;
+    height: 100vh;
+}
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 0s;
+    opacity: 0;
+}
+.portfolio-container .portfolio-box {
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #1f242d;
+    overflow: hidden;
+    display: flex;
+}
+.portfolio-box img{
+    width: 100%;
+    transition: 0.5s ease;
+}
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.343), rgba(0, 238, 255, 0.732));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 2rem;
+    transition: 0.5s ease;
+    transform: translateY(100%);
+}
+.portfolio-layer h4{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.portfolio-layer p{
+    font-size: 0.9rem;
+    margin: 0.2rem 0 1rem;
+}
+.portfolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.portfolio-layer a i {
+    font-size: 1rem;
+    color: #1f242d;
+}
+.portfolio-box:hover img{
+    transform: scale(1.1);
+}
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+}
+.calculator {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+form .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+form .display input{
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+form input.equal{
+    width: 145px;
+
+}
+form input.operator {
+    color: #0ef;
+}
+
+/*******Contact Me*******/
+
+
+.contacth1 {
+    color: #0ef;
+    display: flex;
+    padding: 10px 10%;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+.contact {
+    padding-bottom: 80px;
+    height: 510px;
+    display: grid;
+    place-content: center;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+.form-group {
+    width: 400px;
+    margin: 10px 0;
+}
+.form-group input {
+    width: 100%;
+    height: 42px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+.form-group textarea {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    resize: none;
+    padding: 20px;
+    font-size: 14px;
+}
+.form-group span{
+    font-size: small;
+    color: #ff3333;
+}
+#send-error{
+    color: #ff3333;
+}
+#btn {
+    background-color: #0ef;
+    margin-top: 12px;
+    padding: 20px 70px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+    box-shadow: 0 0 15px #0ef;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+#btn:hover{
+    box-shadow: none;
+    background-color: black;
+    color: #0ef;
+}
+footer h3 {
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+    font-size: x-large;
+    margin: 0 0 25px 0;
+    color: white;
+}
+.error {
+    color: red;
+}
+
+/*Media Screen*/
+
+@media screen and (max-width: 500px) {
+    .hero-container {
+        flex-direction: column-reverse;
+    };
+    .hero-img img{
+        width: 250px;
+    }
+    .navbar {
+        padding-top: 20px;
+        font-size: 15px;
+    }
+    .navbar a {
+        padding: 0px 5px;
+    }
+    .navbarfixed{
+        padding-top: 20px;
+        font-size: 15px;
+    }
+    .navbarfixed a {
+        padding: 0px 5px;
+    }
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 10px;
+    }
+    .navbar {
+        padding-top: 10px;
+    }
+    .info-side h3 {
+        font-size: 20px;
+    }
+    .info-side h1 {
+        font-size: 45px;
+    }
+    .box {
+        list-style: none;
+        border: 1px solid #0ef;
+        margin-left: 10px;
+        font-size: 15px;
+        flex-direction: column;
+        padding: inherit;
+    }
+    .box1{
+        display: contents;
+    }
+    .box2 {
+        display: contents;
+    }
+    .frontD h2{
+        padding-left: 35px;
+    }
+    .imgbox1 {
+        justify-content: center;
+        margin-top: auto;
+        display: inline-table;
+    }
+    .backD h2{
+        margin-top: 25px;
+        padding-left: 35px;
+    }
+    .imgbox2 {
+        display: inline-table;
+    }
+    .contacth1 {
+        padding: 25px;
+    }
+    .footer h3 {
+        padding-top: 100px;
+    }
+    .form-group input {
+        width: 70%;
+        text-align: center;
+        margin-left: 62px;
+    }
+    .form-group textarea {
+        width: 70%;
+        text-align: center;
+        margin-left: 62px;
+    }
+    #btn{
+        width: 50%;
+        text-align: center;
+        margin-left: 100px;
+    }
+}
