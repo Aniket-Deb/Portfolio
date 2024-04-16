@@ -578,7 +578,7 @@ footer h3 {
     .box {
         list-style: none;
         border: 1px solid #0ef;
-        margin-left: 10px;
+        margin-left: 12px;
         font-size: 15px;
         flex-direction: column;
         padding: inherit;
@@ -624,5 +624,9 @@ footer h3 {
         width: 50%;
         text-align: center;
         margin-left: 100px;
+    }
+    .portfolio-container{
+    display: contents;
+    white-space-collapse: preserve-breaks;
     }
 }
