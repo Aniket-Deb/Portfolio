@@ -4,3 +4,4 @@ typed = new Typed('#changing-text', {
     backSpeed: 0,
     loop: true,
   });
+  
