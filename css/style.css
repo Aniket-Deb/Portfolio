@@ -348,6 +348,9 @@ i:hover{
     padding: 25px 10%;
     margin: 130px 0px;
     height: 100%;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 0s;
+
 }
 .portfolio-container {
     display: grid;
@@ -706,9 +709,9 @@ footer h3 {
         font-size: 45px;
     }
     .box {
+        display: grid;
         list-style: none;
-        border: 1px solid #0ef;
-        margin-left: 12px;
+        border: 2px solid #0ef;
         font-size: 15px;
         flex-direction: column;
         padding: inherit;
@@ -758,5 +761,8 @@ footer h3 {
     .portfolio-container{
     display: contents;
     white-space-collapse: break-spaces;
+    }
+    .portfolio {
+        margin: auto;
     }
 }
