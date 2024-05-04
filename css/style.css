@@ -684,14 +684,14 @@ footer h3 {
         font-size: 15px;
     }
     .navbar a {
-        padding: 0px 5px;
+        padding: 0px 6px;
     }
     .navbarfixed{
         padding-top: 20px;
         font-size: 15px;
     }
     .navbarfixed a {
-        padding: 0px 8px;
+        padding: 0px 6px;
     }
     .header {
         flex-direction: column;
