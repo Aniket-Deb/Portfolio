@@ -691,7 +691,7 @@ footer h3 {
         font-size: 15px;
     }
     .navbarfixed a {
-        padding: 0px 5px;
+        padding: 0px 8px;
     }
     .header {
         flex-direction: column;
@@ -764,6 +764,7 @@ footer h3 {
     }
     .portfolio {
         margin: auto;
+        padding: 0px 10%;
     }
     
     .card {
